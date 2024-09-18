@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Invite Pages",
+    "version": "1.0",
+    "description": "Automatically click on all 'Invite' spans.",
+    "permissions": [
+      "activeTab",
+      "scripting"
+    ],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon.jpg",
+        "48": "images/icon.jpg",
+        "128": "images/icon.jpg"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["js/content.js"]
+      }
+    ]
+  }
+  
